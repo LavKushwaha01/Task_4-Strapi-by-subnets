@@ -43,17 +43,17 @@ Private EC2 Instance (Strapi App)
 
 ##  Networking Design Explained
 
-### 🔹 VPC
+###  VPC
 A dedicated VPC is created with a CIDR range to isolate all resources. This ensures that the application runs in a secure and private network environment.
 
-### 🔹 Public Subnets
+###  Public Subnets
 Two public subnets are created in different Availability Zones (AZs). These host:
 - Application Load Balancer  
 - NAT Gateway  
 
 Public subnets have a route to the **Internet Gateway**, allowing inbound and outbound internet access.
 
-### 🔹 Private Subnet
+###  Private Subnet
 The EC2 instance hosting the Strapi application runs inside a private subnet:
 - No public IP address  
 - Not directly accessible from the internet  
